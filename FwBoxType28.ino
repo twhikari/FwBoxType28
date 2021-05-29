@@ -15,7 +15,7 @@
 #include "SoftwareSerial.h"
 
 #define DEVICE_TYPE 28
-#define FIRMWARE_VERSION "1.0.1"
+#define FIRMWARE_VERSION "1.0.2"
 
 #define ANALOG_VALUE_DEBOUNCING 8
 
@@ -98,7 +98,7 @@ uint8_t read()
   //
   if(Pms.readPms()) {
     if(Pms.readDeviceType() == FwBox_PMSX003::PMS3003) {
-      DBG_PRINTLN("PMS5003 is detected.");
+      DBG_PRINTLN("PMS3003 is detected.");
       DBG_PRINT("PM1.0=");
       DBG_PRINTLN(Pms.pm1_0());
       DBG_PRINT("PM2.5=");
